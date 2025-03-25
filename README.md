@@ -28,7 +28,7 @@ yarn run v1.22.22
 ✔ What is your app name? · tauri-app
 ✔ What should the window title be? · tauri-app
 ✔ Where are your web assets (HTML/CSS/JS) located, relative to the "<current dir>/src-tauri/tauri.conf.json" file that will be created? · ..
-✔ What is the url of your dev server? · http://localhost:5173
+✔ What is the url of your dev server? · http://localhost:3000
 ✔ What is your frontend dev command? · yarn dev
 ✔ What is your frontend build command? · yarn build
 ```
