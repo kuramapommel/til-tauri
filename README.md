@@ -41,7 +41,7 @@ https://github.com/kuramapommel/til-tauri/blob/28fbc69fae2d7aa2513563864068caeef
 
 下記を参考に `./tauri-app/next.config.ts` を修正
 
-https://github.com/kuramapommel/til-tauri/blob/28fbc69fae2d7aa2513563864068caeef68988f1/tauri-app/next.config.ts
+https://github.com/kuramapommel/til-tauri/blob/28fbc69fae2d7aa2513563864068caeef68988f1/tauri-app/next.config.ts#L1-L14
 
 ビルド可能であることを確認
 
