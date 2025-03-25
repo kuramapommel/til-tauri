@@ -33,6 +33,22 @@ yarn run v1.22.22
 ✔ What is your frontend build command? · yarn build
 ```
 
+### Next.js のビルド周りを修正
+
+下記を参考に `./tauri-app/package.json` の `script` に `tauri` コマンドを追加
+
+https://github.com/kuramapommel/til-tauri/blob/28fbc69fae2d7aa2513563864068caeef68988f1/tauri-app/package.json#L10
+
+下記を参考に `./tauri-app/next.config.ts` を修正
+
+https://github.com/kuramapommel/til-tauri/blob/28fbc69fae2d7aa2513563864068caeef68988f1/tauri-app/next.config.ts
+
+ビルド可能であることを確認
+
+```sh
+yarn build
+```
+
 ### プロジェクトの起動確認
 
 ```sh
