@@ -1,0 +1,4 @@
+// 機密情報を含む設定ファイル
+// このファイルは.gitignoreに追加する必要があります
+API_KEY = your_api_key_here
+APP_SECRET = your_app_secret_here 
