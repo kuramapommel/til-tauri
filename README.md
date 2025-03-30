@@ -2,6 +2,13 @@
 
 ## プロジェクトの雛形作成
 
+基本的には下記の公式マニュアルに沿って環境構築を進めれば良い
+
+- [必要事項](https://v2.tauri.app/ja/start/prerequisites/)
+- [プロジェクトの作成](https://v2.tauri.app/ja/start/create-project/)
+
+ここでは, ぼくが実際に進めた手順を記載しておく
+
 ### [Tauri のマニュアルセットアップ](https://v2.tauri.app/ja/start/create-project/#%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97) を参考にフロントエンドのプロジェクト雛形を構築する
 
 ```sh
