@@ -97,3 +97,30 @@ yarn tauri android dev
 
 シミュレータがダウンロードされていない場合は, エラーになってしまうので, 先に済ませておく
 Tauri の対応 Java バージョンが 17 なので,　ビルド時に Java17 が指定されていないとエラーになってしまう
+
+## テスト実行環境の構築
+
+### Vitest を用いたフロントエンドユニットテスト
+
+基本的には下記の Next.js 公式ドキュメントを参考に進める
+
+- [Setting up Vitest with Next.js](https://nextjs.org/docs/app/building-your-application/testing/vitest)
+
+```sh
+# `./tauri-app/` で実行
+yarn add -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-library/dom vite-tsconfig-paths
+```
+
+`./tauri-app/vitest.config.mts` を作成する
+
+https://github.com/kuramapommel/til-tauri/blob/996875cb829f817a61af3b7323e9f0ee103b1c33/tauri-app/vitest.config.mts#L1-L10
+
+下記を参考に `./tauri-app/package.json` の `script` に `test` コマンドを追加
+
+https://github.com/kuramapommel/til-tauri/blob/996875cb829f817a61af3b7323e9f0ee103b1c33/tauri-app/package.json#L10
+
+下記コマンドでテストを実行する
+
+```sh
+yarn test
+```
