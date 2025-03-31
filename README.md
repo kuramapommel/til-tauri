@@ -124,3 +124,14 @@ https://github.com/kuramapommel/til-tauri/blob/996875cb829f817a61af3b7323e9f0ee1
 ```sh
 yarn test
 ```
+
+### cargo test を用いたバックエンドのユニットテスト
+
+Cargo には標準でテスト機構が含まれているため, 特別な環境構築は不要
+
+下記コマンドでテストを実行する
+
+```sh
+# `./tauri-app/src-tauri/` で実行
+cargo test
+```
