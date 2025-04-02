@@ -125,6 +125,17 @@ https://github.com/kuramapommel/til-tauri/blob/996875cb829f817a61af3b7323e9f0ee1
 yarn test
 ```
 
+### フロントエンドテストで [IPC(Inter-Process Communication)](https://v2.tauri.app/ja/concept/inter-process-communication/) をモック化したい場合
+
+```sh
+# `./tauri-app/` で実行
+yarn add -D @tauri-apps/api @testing-library/user-event
+```
+
+下記のように `mockIPC` を用いて IPC(Inter-Process Communication) をモック化することができる
+
+https://github.com/kuramapommel/til-tauri/blob/46c48e0ea57b43367cca4aa08bce62611383fd92/tauri-app/src/components/sample-components.test.tsx#L13-L17
+
 ### cargo test を用いたバックエンドのユニットテスト
 
 Cargo には標準でテスト機構が含まれているため, 特別な環境構築は不要
