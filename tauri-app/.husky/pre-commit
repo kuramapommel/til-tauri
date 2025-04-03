@@ -1,1 +1,5 @@
+cd tauri-app
+yarn format
 yarn test
+yarn lint
+git add .

@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write .",
     "test": "vitest --run",
     "tauri": "tauri",
-    "prepare": "cd .. & husky tauri-app/.husky"
+    "prepare": "cd .. && husky tauri-app/.husky"
   },
   "dependencies": {
     "next": "15.2.4",
@@ -30,8 +31,10 @@
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
+    "eslint-config-prettier": "^10.1.1",
     "husky": "^9.1.7",
     "jsdom": "^26.0.0",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite-tsconfig-paths": "^5.1.4",
