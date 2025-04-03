@@ -146,3 +146,59 @@ Cargo には標準でテスト機構が含まれているため, 特別な環境
 # `./tauri-app/src-tauri/` で実行
 cargo test
 ```
+
+## CI 構築
+
+### husky の構築
+
+#### Prettier の導入
+
+基本的には下記の Next.js 公式ドキュメントを参考に進める
+
+[ESLint Plugin#With Prettier](https://nextjs.org/docs/app/api-reference/config/eslint#with-prettier)
+
+```sh
+# `./tauri-app/` で実行
+yarn add -D prettier eslint-config-prettier
+```
+
+下記を参考に `./tauri-app/package.json` の `script` に `format` コマンドを追加
+
+https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bdaa1895d1/tauri-app/package.json#L10
+
+下記を参考に `./tauri-app/eslint.config.mjs` に `prettier` を追加
+
+https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bdaa1895d1/tauri-app/eslint.config.mjs#L13
+
+`./tauri-app/src-tauri` をフォーマット対象から省くため下記を参考に `./.prettierignore` を作成
+
+https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bdaa1895d1/tauri-app/.prettierignore#L1
+
+#### husky の構築
+
+```sh
+# `./tauri-app/` で実行
+yarn add -D husky
+```
+
+下記コマンドで husky を初期化する
+
+```sh
+# `./tauri-app/` で実行
+npx husky init
+```
+
+下記を参考に自動生成される `./.husky/pre-commit` を修正
+
+https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bdaa1895d1/tauri-app/.husky/pre-commit#L1-L5
+
+下記を参考に自動生成される `./tauri-app/package.json` の `script` の `prepare` コマンドを修正
+
+https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bdaa1895d1/tauri-app/package.json#L13
+
+下記コマンドを実行して, husky が参照する `pre-commit` ファイルを適応
+
+```sh
+# `./tauri-app/` で実行
+yarn
+```
