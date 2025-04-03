@@ -147,6 +147,23 @@ Cargo には標準でテスト機構が含まれているため, 特別な環境
 cargo test
 ```
 
+### Vitest と cargo test を `yarn test` コマンドひとつにまとめる
+
+下記を参考に `./tauri-app/package.json` の `script` に `test` コマンドにフロントエンドテストとバックエンドテストをまとめる
+
+https://github.com/kuramapommel/til-tauri/blob/51f492f7853084a454d02b3938a55eddea77ed97/tauri-app/package.json#L11
+
+下記コマンドでテストを実行する
+
+```sh
+# `./tauri-app/` で実行
+yarn test
+```
+
+フロントエンドとバックエンドのテストもそれぞれ分けて実行できるように, 下記を参考に `./tauri-app/package.json` の `script` に `test:front` コマンドと `test:back` コマンドをそれぞれ作成
+
+https://github.com/kuramapommel/til-tauri/blob/51f492f7853084a454d02b3938a55eddea77ed97/tauri-app/package.json#L12-L13
+
 ## CI 構築
 
 ### husky の構築
