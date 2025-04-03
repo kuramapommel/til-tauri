@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "test": "vitest --run",
+    "test": "vitest --run && cd src-tauri && cargo test",
+    "test:front": "vitest --run",
+    "test:back": "cd src-tauri && cargo test",
     "tauri": "tauri",
     "prepare": "cd .. && husky tauri-app/.husky"
   },
