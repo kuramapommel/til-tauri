@@ -98,7 +98,7 @@ yarn tauri android dev
 シミュレータがダウンロードされていない場合は, エラーになってしまうので, 先に済ませておく
 Tauri の対応 Java バージョンが 17 なので,　ビルド時に Java17 が指定されていないとエラーになってしまう
 
-## テスト実行環境の構築
+## ユニットテスト実行環境の構築
 
 ### Vitest を用いたフロントエンドユニットテスト
 
@@ -163,6 +163,36 @@ yarn test
 フロントエンドとバックエンドのテストもそれぞれ分けて実行できるように, 下記を参考に `./tauri-app/package.json` の `script` に `test:front` コマンドと `test:back` コマンドをそれぞれ作成
 
 https://github.com/kuramapommel/til-tauri/blob/51f492f7853084a454d02b3938a55eddea77ed97/tauri-app/package.json#L12-L13
+
+## e2e テスト実行環境の構築
+
+### Playright を用いた e2e テスト
+
+基本的には下記の Playright 公式ドキュメントを参考に進める
+
+[Installation](https://playwright.dev/docs/intro#installation)
+
+下記のコマンドで Playwright をインストールする
+
+```sh
+# `./tauri-app/` で実行
+yarn create playwright
+
+# ...（中略）
+✔ Where to put your end-to-end tests? · e2e
+✔ Add a GitHub Actions workflow? (y/N) · false
+✔ Install Playwright browsers (can be done manually via 'yarn playwright install')? (Y/n) · true
+```
+
+自動生成される `./tests-examples/demo-todo-app.spec.ts` は削除してしまっても構わない
+
+下記を参考に `./playwright.config.ts` のモバイル向けテストエージェントを活性化（コメントアウトを外す）する
+
+https://github.com/kuramapommel/til-tauri/blob/24def96627401ec476439f3999f14a7f11cf005d/tauri-app/playwright.config.ts#L53-L60
+
+下記を参考に vitest のテスト対象から `./e2e/` 配下を外す
+
+https://github.com/kuramapommel/til-tauri/blob/24def96627401ec476439f3999f14a7f11cf005d/tauri-app/vitest.config.mts#L9
 
 ## CI 構築
 
