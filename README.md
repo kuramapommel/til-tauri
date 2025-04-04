@@ -248,7 +248,7 @@ npx husky init
 
 下記を参考に自動生成される `./.husky/pre-commit` を修正
 
-https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bdaa1895d1/tauri-app/.husky/pre-commit#L1-L5
+https://github.com/kuramapommel/til-tauri/blob/b1f65489113e804861e31d08ab648081226a7d92/tauri-app/.husky/pre-commit#L1-L6
 
 下記を参考に自動生成される `./tauri-app/package.json` の `script` の `prepare` コマンドを修正
 
