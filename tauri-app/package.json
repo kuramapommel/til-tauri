@@ -11,6 +11,7 @@
     "test": "vitest --run && cd src-tauri && cargo test",
     "test:front": "vitest --run",
     "test:back": "cd src-tauri && cargo test",
+    "e2e": "playwright test",
     "tauri": "tauri",
     "prepare": "cd .. && husky tauri-app/.husky"
   },
