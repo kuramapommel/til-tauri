@@ -1,5 +1,6 @@
 cd tauri-app
 yarn format
-yarn test
 yarn lint
+yarn test
+cd ..
 git add .
