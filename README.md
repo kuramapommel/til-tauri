@@ -194,6 +194,17 @@ https://github.com/kuramapommel/til-tauri/blob/24def96627401ec476439f3999f14a7f1
 
 https://github.com/kuramapommel/til-tauri/blob/24def96627401ec476439f3999f14a7f11cf005d/tauri-app/vitest.config.mts#L9
 
+下記を参考に `./tauri-app/package.json` の `script` に `e2e` コマンドを追加
+
+https://github.com/kuramapommel/til-tauri/blob/791877e88a54f0f15b71be9966e25bbdeb3b9f77/tauri-app/package.json#L14
+
+下記コマンドでテストを実行する
+
+```sh
+# `./tauri-app/` で実行
+yarn e2e
+```
+
 ## CI 構築
 
 ### husky の構築
