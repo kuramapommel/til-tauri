@@ -113,11 +113,11 @@ yarn add -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-li
 
 `./tauri-app/vitest.config.mts` を作成する
 
-https://github.com/kuramapommel/til-tauri/blob/996875cb829f817a61af3b7323e9f0ee103b1c33/tauri-app/vitest.config.mts#L1-L10
+https://github.com/kuramapommel/til-tauri/blob/d17b12a4ee393659a3114c87e869cf3f9c632c68/tauri-app/vitest.config.mts#L1-L13
 
 下記を参考に `./tauri-app/package.json` の `script` に `test` コマンドを追加
 
-https://github.com/kuramapommel/til-tauri/blob/996875cb829f817a61af3b7323e9f0ee103b1c33/tauri-app/package.json#L10
+https://github.com/kuramapommel/til-tauri/blob/d17b12a4ee393659a3114c87e869cf3f9c632c68/tauri-app/package.json#L12
 
 下記コマンドでテストを実行する
 
@@ -250,8 +250,7 @@ npx husky init
 
 https://github.com/kuramapommel/til-tauri/blob/c5856648f3c6de68dc3e11bc1ac856013bfb2ed2/tauri-app/.husky/pre-commit#L1-L10
 
-> [!TIP]
-> `cargo fmt` や `cargo clippy` が導入されていない場合は下記コマンドを実行して導入する
+> [!TIP] > `cargo fmt` や `cargo clippy` が導入されていない場合は下記コマンドを実行して導入する
 >
 > ```sh
 > # rustfmt （cargo fmt）の導入
