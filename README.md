@@ -260,3 +260,45 @@ https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bda
 # `./tauri-app/` で実行
 yarn
 ```
+
+## UI カタログの構築
+
+### Storybook を用いた UI カタログ
+
+基本的に下記の Storybook 公式ドキュメントを参考に進める
+
+- [Storybook for Next.js](https://storybook.js.org/docs/get-started/frameworks/nextjs#getting-started)
+
+下記のコマンドで Playwright をインストールする
+
+```sh
+# `./tauri-app/` で実行
+yarn create storybook
+
+# ...（中略）
+What do you want to use Storybook for? # そのまま Enter
+
+# ...（中略）
+Do you want to migrate? … yes
+```
+
+自動生成される `./src/stories` は不要なので削除
+
+下記を参考に自動生成される `./.storybook/main.ts` を修正
+
+https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/.storybook/main.ts#L4
+
+下記を参考に自動生成される `./.storybook/preview.ts` を修正
+
+https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/.storybook/preview.ts#L1
+
+下記を参考に `./postcss.config.mjs` を修正
+
+https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/postcss.config.mjs#L2-L4
+
+下記コマンドで Storybook を起動する
+
+```sh
+# `./tauri-app/` で実行
+yarn storybook
+```
