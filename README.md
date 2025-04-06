@@ -273,6 +273,14 @@ https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bda
 yarn
 ```
 
+### GitHub Actions の構築
+
+#### フロントエンド CI のワークフロー構築
+
+下記を参考に `.github/workflows/integration.yml` を作成
+
+https://github.com/kuramapommel/til-tauri/blob/d17b12a4ee393659a3114c87e869cf3f9c632c68/.github/workflows/integration.yml#L1-L56
+
 ## UI カタログの構築
 
 ### Storybook を用いた UI カタログ
