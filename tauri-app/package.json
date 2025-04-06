@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "test": "vitest --run && cd src-tauri && cargo test",
-    "test:front": "vitest --run",
+    "test:front": "vitest --run --project=unit",
     "test:back": "cd src-tauri && cargo test",
     "e2e": "playwright test",
     "tauri": "tauri",
