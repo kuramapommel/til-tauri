@@ -248,7 +248,20 @@ npx husky init
 
 下記を参考に自動生成される `./.husky/pre-commit` を修正
 
-https://github.com/kuramapommel/til-tauri/blob/b1f65489113e804861e31d08ab648081226a7d92/tauri-app/.husky/pre-commit#L1-L6
+https://github.com/kuramapommel/til-tauri/blob/c5856648f3c6de68dc3e11bc1ac856013bfb2ed2/tauri-app/.husky/pre-commit#L1-L10
+
+> [!TIP]
+> `cargo fmt` や `cargo clippy` が導入されていない場合は下記コマンドを実行して導入する
+>
+> ```sh
+> # rustfmt （cargo fmt）の導入
+> rustup component add rustfmt
+> ```
+>
+> ```sh
+> # clippy （cargo clippy）の導入
+> rustup component add clippy
+> ```
 
 下記を参考に自動生成される `./tauri-app/package.json` の `script` の `prepare` コマンドを修正
 
