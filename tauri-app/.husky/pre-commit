@@ -1,6 +1,10 @@
 cd tauri-app
 yarn format
 yarn lint
-yarn test
+yarn test:front
+cd src-tauri
+cargo fmt
+cargo clippy -- -D warnings
+cargo test
 cd ..
 git add .
