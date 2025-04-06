@@ -186,9 +186,12 @@ yarn create playwright
 
 自動生成される `./tests-examples/demo-todo-app.spec.ts` は削除してしまっても構わない
 
-下記を参考に `./playwright.config.ts` のモバイル向けテストエージェントを活性化（コメントアウトを外す）する
+下記を参考に `./playwright.config.ts` を編集
 
-https://github.com/kuramapommel/til-tauri/blob/24def96627401ec476439f3999f14a7f11cf005d/tauri-app/playwright.config.ts#L53-L60
+- レポートの出力先を `./playwright-report` に指定し, ブラウザを起動しないように設定する
+  - https://github.com/kuramapommel/til-tauri/blob/6274a4c03661a4408f060b58dd99129ecf9f465f/tauri-app/playwright.config.ts#L25
+- モバイル向けテストエージェントを活性化（コメントアウトを外す）する
+  - https://github.com/kuramapommel/til-tauri/blob/6274a4c03661a4408f060b58dd99129ecf9f465f/tauri-app/playwright.config.ts#L52-L60
 
 下記を参考に vitest のテスト対象から `./e2e/` 配下を外す
 
@@ -289,7 +292,7 @@ https://github.com/kuramapommel/til-tauri/blob/d17b12a4ee393659a3114c87e869cf3f9
 
 - [Storybook for Next.js](https://storybook.js.org/docs/get-started/frameworks/nextjs#getting-started)
 
-下記のコマンドで Playwright をインストールする
+下記のコマンドで Storybook をインストールする
 
 ```sh
 # `./tauri-app/` で実行
