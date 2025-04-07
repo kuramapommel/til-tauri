@@ -62,6 +62,22 @@ jobs:
       run:
         working-directory: tauri-app
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install yarn
+        run: npm install -g yarn
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+          cache-dependency-path: "tauri-app/yarn.lock"
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+        
       - name: Build Storybook
         run: yarn storybook:build
 
