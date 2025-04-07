@@ -280,9 +280,15 @@ yarn
 
 #### フロントエンド CI のワークフロー構築
 
-下記を参考に `.github/workflows/integration.yml` を作成
+下記を参考に `.github/workflows/integration-frontend.yml` を作成
 
-https://github.com/kuramapommel/til-tauri/blob/d17b12a4ee393659a3114c87e869cf3f9c632c68/.github/workflows/integration.yml#L1-L56
+https://github.com/kuramapommel/til-tauri/blob/366f3a6d48151984e8b6998e559bd93b8929b233/.github/workflows/integration-frontend.yml#L1-L56
+
+#### バックエンド CI のワークフロー構築
+
+下記を参考に `.github/workflows/integration-backend.yml` を作成
+
+https://github.com/kuramapommel/til-tauri/blob/366f3a6d48151984e8b6998e559bd93b8929b233/.github/workflows/integration-backend.yml#L1-L43
 
 ## UI カタログの構築
 
