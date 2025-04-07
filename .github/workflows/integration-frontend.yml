@@ -56,9 +56,8 @@ jobs:
           retention-days: 30
 
       - name: Upload Storybook Documents
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: storybook-docs
           path: tauri-app/storybook-static
 
   deploy:
@@ -68,7 +67,7 @@ jobs:
       pages: write
       id-token: write
     environment:
-      name: storybook-docs
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
