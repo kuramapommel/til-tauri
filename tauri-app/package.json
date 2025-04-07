@@ -15,7 +15,7 @@
     "tauri": "tauri",
     "prepare": "cd .. && husky tauri-app/.husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "next": "15.2.4",

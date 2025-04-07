@@ -115,14 +115,14 @@ yarn add -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-li
 
 https://github.com/kuramapommel/til-tauri/blob/d17b12a4ee393659a3114c87e869cf3f9c632c68/tauri-app/vitest.config.mts#L1-L13
 
-下記を参考に `./tauri-app/package.json` の `script` に `test` コマンドを追加
+下記を参考に `./tauri-app/package.json` の `script` に `test:front` コマンドを追加
 
 https://github.com/kuramapommel/til-tauri/blob/d17b12a4ee393659a3114c87e869cf3f9c632c68/tauri-app/package.json#L12
 
 下記コマンドでテストを実行する
 
 ```sh
-yarn test
+yarn test:front
 ```
 
 ### フロントエンドテストで [IPC(Inter-Process Communication)](https://v2.tauri.app/ja/concept/inter-process-communication/) をモック化したい場合
