@@ -282,7 +282,7 @@ yarn
 
 下記を参考に `.github/workflows/integration-frontend.yml` を作成
 
-https://github.com/kuramapommel/til-tauri/blob/366f3a6d48151984e8b6998e559bd93b8929b233/.github/workflows/integration-frontend.yml#L1-L56
+https://github.com/kuramapommel/til-tauri/blob/c4c0ecbcc957e5d258f1a89e4a93279b9736c804/.github/workflows/integration-frontend.yml#L1-L56
 
 #### バックエンド CI のワークフロー構築
 
@@ -331,3 +331,20 @@ https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3
 # `./tauri-app/` で実行
 yarn storybook
 ```
+
+## CD の構築
+
+### GitHub Actions の構築
+
+#### Storybook のデプロイ
+
+下記を参考に `.github/workflows/integration-frontend.yml` に追記
+
+- Storybook をビルド
+  - https://github.com/kuramapommel/til-tauri/blob/c4c0ecbcc957e5d258f1a89e4a93279b9736c804/.github/workflows/integration-frontend.yml#L58-L87
+- Storybook を GitHub Pages にデプロイ
+  - https://github.com/kuramapommel/til-tauri/blob/c4c0ecbcc957e5d258f1a89e4a93279b9736c804/.github/workflows/integration-frontend.yml#L89-L100
+
+GitHub の設定ページから GitHub Pages を GitHub Action からデプロイするように設定
+
+- [このページ](https://qiita.com/shun198/items/18f852caea2b4068ebaf#github-pages%E3%81%AE%E8%A8%AD%E5%AE%9A) が参考になる
