@@ -208,6 +208,48 @@ https://github.com/kuramapommel/til-tauri/blob/791877e88a54f0f15b71be9966e25bbde
 yarn e2e
 ```
 
+## UI カタログの構築
+
+### Storybook を用いた UI カタログ
+
+基本的に下記の Storybook 公式ドキュメントを参考に進める
+
+- [Storybook for Next.js](https://storybook.js.org/docs/get-started/frameworks/nextjs#getting-started)
+
+下記のコマンドで Storybook をインストールする
+
+```sh
+# `./tauri-app/` で実行
+yarn create storybook
+
+# ...（中略）
+What do you want to use Storybook for? # そのまま Enter
+
+# ...（中略）
+Do you want to migrate? … yes
+```
+
+自動生成される `./src/stories` は不要なので削除
+
+下記を参考に自動生成される `./.storybook/main.ts` を修正
+
+https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/.storybook/main.ts#L4
+
+下記を参考に自動生成される `./.storybook/preview.ts` を修正
+
+https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/.storybook/preview.ts#L1
+
+下記を参考に `./postcss.config.mjs` を修正
+
+https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/postcss.config.mjs#L2-L4
+
+下記コマンドで Storybook を起動する
+
+```sh
+# `./tauri-app/` で実行
+yarn storybook
+```
+
 ## CI 構築
 
 ### husky の構築
@@ -276,61 +318,37 @@ https://github.com/kuramapommel/til-tauri/blob/f97e0dce03d6819c5f387cffa4bdf3bda
 yarn
 ```
 
+### storybook test の構築
+
+基本的には下記の Storybook 公式ドキュメントを参考に進める
+
+[Test runner](https://storybook.js.org/docs/writing-tests/test-runner)
+
+```sh
+yarn add -D @storybook/test-runner
+```
+
+下記を参考に `./tauri-app/package.json` の `script` に `storybook:test`, `storybook:build`, `storybook:ci` コマンドを追加
+
+https://github.com/kuramapommel/til-tauri/blob/74592472c9c30aa0bd95cff06b7089e3efa1fba2/tauri-app/package.json#L18-L20
+
+下記を参考に `./.gitignore` に storybook のビルド成果物が Git 管理下に含まれないように設定を追加
+
+https://github.com/kuramapommel/til-tauri/blob/74592472c9c30aa0bd95cff06b7089e3efa1fba2/tauri-app/.gitignore#L51
+
 ### GitHub Actions の構築
 
 #### フロントエンド CI のワークフロー構築
 
 下記を参考に `.github/workflows/integration-frontend.yml` を作成
 
-https://github.com/kuramapommel/til-tauri/blob/c4c0ecbcc957e5d258f1a89e4a93279b9736c804/.github/workflows/integration-frontend.yml#L1-L56
+https://github.com/kuramapommel/til-tauri/blob/74592472c9c30aa0bd95cff06b7089e3efa1fba2/.github/workflows/integration-frontend.yml#L1-L59
 
 #### バックエンド CI のワークフロー構築
 
 下記を参考に `.github/workflows/integration-backend.yml` を作成
 
 https://github.com/kuramapommel/til-tauri/blob/366f3a6d48151984e8b6998e559bd93b8929b233/.github/workflows/integration-backend.yml#L1-L43
-
-## UI カタログの構築
-
-### Storybook を用いた UI カタログ
-
-基本的に下記の Storybook 公式ドキュメントを参考に進める
-
-- [Storybook for Next.js](https://storybook.js.org/docs/get-started/frameworks/nextjs#getting-started)
-
-下記のコマンドで Storybook をインストールする
-
-```sh
-# `./tauri-app/` で実行
-yarn create storybook
-
-# ...（中略）
-What do you want to use Storybook for? # そのまま Enter
-
-# ...（中略）
-Do you want to migrate? … yes
-```
-
-自動生成される `./src/stories` は不要なので削除
-
-下記を参考に自動生成される `./.storybook/main.ts` を修正
-
-https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/.storybook/main.ts#L4
-
-下記を参考に自動生成される `./.storybook/preview.ts` を修正
-
-https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/.storybook/preview.ts#L1
-
-下記を参考に `./postcss.config.mjs` を修正
-
-https://github.com/kuramapommel/til-tauri/blob/86600f5256ba8fa8696072cc954e776d3e88ebaf/tauri-app/postcss.config.mjs#L2-L4
-
-下記コマンドで Storybook を起動する
-
-```sh
-# `./tauri-app/` で実行
-yarn storybook
-```
 
 ## CD の構築
 
