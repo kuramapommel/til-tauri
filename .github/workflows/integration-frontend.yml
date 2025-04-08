@@ -41,6 +41,9 @@ jobs:
       - name: Run Frontend Unit Tests
         run: yarn test:front
 
+      - name: Run Frontend Unit Tests
+        run: yarn test:front
+
       - name: Install Playwright
         run: npx playwright install --with-deps
 
@@ -77,7 +80,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn --frozen-lockfile
-        
+
       - name: Build Storybook
         run: yarn storybook:build
 
