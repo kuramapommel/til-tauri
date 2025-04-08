@@ -325,7 +325,7 @@ yarn
 [Test runner](https://storybook.js.org/docs/writing-tests/test-runner)
 
 ```sh
-yarn add -D @storybook/test-runner
+yarn add -D @storybook/test-runner concurrently
 ```
 
 下記を参考に `./tauri-app/package.json` の `script` に `storybook:test`, `storybook:build`, `storybook:ci` コマンドを追加
