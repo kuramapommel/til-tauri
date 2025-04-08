@@ -41,11 +41,11 @@ jobs:
       - name: Run Frontend Unit Tests
         run: yarn test:front
 
-      - name: Run Component Tests
-        run: yarn storybook:ci
-
       - name: Install Playwright
         run: npx playwright install --with-deps
+
+      - name: Run Component Tests
+        run: yarn storybook:ci
 
       - name: Run Playwright tests
         run: yarn e2e
