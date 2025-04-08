@@ -342,7 +342,7 @@ https://github.com/kuramapommel/til-tauri/blob/74592472c9c30aa0bd95cff06b7089e3e
 
 下記を参考に `.github/workflows/integration-frontend.yml` を作成
 
-https://github.com/kuramapommel/til-tauri/blob/70af79f3dccebea71dbe5c4e62678e5e967b555e/.github/workflows/integration-frontend.yml#L1-L59
+https://github.com/kuramapommel/til-tauri/blob/ac011698a708aa75fd8db377816ef68043eedbe7/.github/workflows/integration-frontend.yml#L1-L59
 
 #### バックエンド CI のワークフロー構築
 
