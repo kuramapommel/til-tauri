@@ -4,13 +4,13 @@ on:
     branches:
       - main
     paths:
-      - "./tauri-app/src-tauri/**"
+      - "tauri-app/src-tauri/**"
       - ".github/workflows/integration-backend.yml"
   pull_request:
     branches:
       - main
     paths:
-      - "./tauri-app/src-tauri/**"
+      - "tauri-app/src-tauri/**"
       - ".github/workflows/integration-backend.yml"
 
 jobs:
